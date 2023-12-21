@@ -5,7 +5,6 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/labstack/echo/v4"
 	"github/pikachu0310/unity-websocket-lecture/server"
-	"strconv"
 	"time"
 )
 
@@ -26,7 +25,7 @@ func HandleConnectionRequest(c echo.Context) error {
 		for {
 			time.Sleep(1 * time.Second)
 			i++
-			client.SendText("Hello From Server " + strconv.Itoa(i))
+			//client.SendText("Hello From Server " + strconv.Itoa(i))
 		}
 	}()
 
